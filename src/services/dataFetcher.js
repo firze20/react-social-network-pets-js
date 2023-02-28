@@ -53,9 +53,12 @@ export function fetchUserData(username, callback) {
     callback(FAKE_USER_DATA[username]);
   }, delay);
 
-  timeoutByFetchId.set(fetch._id, timeout);
 
+
+  timeoutByFetchId.set(fetch._id, timeout);
+  
   return fetch;
+
 }
 
 export function cancelFetch(fetch) {

@@ -33,10 +33,13 @@ export class Profile extends React.Component {
         });
 
         this.fetchID = fetchUserData(this.props.username, (userData) => {
+          console.log(userData)
             this.setState({
                 userData
             });
-        })
+        });
+
+        console.log(this.fetchID);
     }
   render() {
     let isLoading = this.state.userData === null ? true : false;
